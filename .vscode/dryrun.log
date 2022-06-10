@@ -1,0 +1,8 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/billmich/Desktop/tictactoe_ai'
+g++ ai_trainerO.cc
+gnome-terminal -e ./a.out
+g++ ai_trainerX.cc
+gnome-terminal -e ./a.out
+make: Leaving directory '/home/billmich/Desktop/tictactoe_ai'
+ 

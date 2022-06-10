@@ -1,9 +1,10 @@
-o :
-	g++ ai_trainerO.cc
-	./a.out
-x :
-	g++ ai_trainerX.cc
-	./a.out
 test :
+	g++ ai_trainerO.cc
+	gnome-terminal -e ./a.out
+	g++ ai_trainerX.cc
+	gnome-terminal -e ./a.out
+open:
 	g++ test_main.cc
 	./a.out
+
+	
