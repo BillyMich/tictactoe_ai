@@ -57,7 +57,7 @@ int main()
         // sent the move we got to the main
 
     fd = open(myfifo, O_WRONLY);
-        int Move = rand() % 10  ;
+        int Move = rand() % 9  ;
 
         //Here we make some configuration //
         // From int -> string -> const void * 

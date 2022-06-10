@@ -3,8 +3,7 @@ test :
 	gnome-terminal -e ./a.out
 	g++ ai_trainerX.cc
 	gnome-terminal -e ./a.out
-open:
-	g++ test_main.cc
-	./a.out
+	g++ test_main.cc -l sqlite3
+	gnome-terminal -e ./a.out
 
 	
