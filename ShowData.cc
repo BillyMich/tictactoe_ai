@@ -21,14 +21,22 @@ int main(int argc, char** argv)
 {
 	sqlite3* DB;
 	char* messaggeError;
-	int exit = sqlite3_open("AIdb.db", &DB);
-	string query = "SELECT * FROM MovesForX;";
+	int exit = sqlite3_open("TictactoeAI.db", &DB);
+	
 
+	cout<< "For X data type 1 or 2 for Y data"<< endl;
+	int msg;
+	cin >>  msg ;
+	if (msg ==1){
+	string query = "SELECT * FROM X;";
 
 	sqlite3_exec(DB, query.c_str(), callback, NULL, NULL);
+	}else{
+		string query = "SELECT * FROM Y;";
 
-
-
+	sqlite3_exec(DB, query.c_str(), callback, NULL, NULL);
+	}
+	
 	sqlite3_close(DB);
 	return (0);
 }

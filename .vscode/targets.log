@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jun 10 18:01:26 2022
+# Make data base, printed on Sat Jun 11 16:38:31 2022
 
 # Variables
 
@@ -51,7 +51,7 @@ SNAP_DATA = /var/snap/code/97
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:46774
+JOURNAL_STREAM = 8:45982
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -95,7 +95,7 @@ PATH = /home/billmich/.local/bin:/home/billmich/.local/bin:/usr/local/sbin:/usr/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/billmich:@/tmp/.ICE-unix/1902,unix/billmich:/tmp/.ICE-unix/1902
+SESSION_MANAGER = local/billmich:@/tmp/.ICE-unix/1908,unix/billmich:/tmp/.ICE-unix/1908
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -113,7 +113,7 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 259a52ae635f48a488206888d4257ac4
+INVOCATION_ID = ed56f19b1daa497f9332aa55bb0eec87
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/97/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -125,7 +125,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2420
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2981
 # automatic
 %F = $(notdir $%)
 # environment
@@ -139,7 +139,7 @@ PWD = /home/billmich/Desktop/tictactoe_ai
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1862
+SSH_AGENT_PID = 1867
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -190,9 +190,8 @@ SNAP_USER_DATA = /home/billmich/snap/code/97
 SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
- 
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-19364303-29dc-4654-a8bc-d0e988c2bd0b.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2231399e-aa92-470f-9793-ac670f10e065.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -274,7 +273,7 @@ LC_ADDRESS = el_GR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 2565
+VSCODE_PID = 3030
 # variable set hash-table stats:
 # Load=131/1024=13%, Rehash=0, Collisions=23/156=15%
 
@@ -284,9 +283,9 @@ VSCODE_PID = 2565
 
 # Directories
 
-# . (device 2053, inode 1576633): 16 files, no impossibilities.
+# . (device 2053, inode 1576633): 13 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -301,6 +300,15 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
+new:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 10):
+	g++ new.cc -l sqlite3
+	gnome-terminal -e ./a.out
+	
+
 test:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -310,15 +318,14 @@ test:
 	gnome-terminal -e ./a.out
 	g++ ai_trainerX.cc
 	gnome-terminal -e ./a.out
- 
-	g++ test_main.cc -l sqlite3
+	g++ Main.cc -l sqlite3
 	gnome-terminal -e ./a.out
-	
 
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-10 18:00:31.974951902
+ 
+#  Last modified 2022-06-11 16:37:56.399468379
 #  File has been updated.
 #  Successfully updated.
 
@@ -329,19 +336,19 @@ makefile:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=5/1024=0%, Rehash=0, Collisions=0/15=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/16=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 22 / storage = 199 B / avg = 9 B
-# current buf: size = 8162 B / used = 199 B / count = 22 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 20 / storage = 176 B / avg = 8 B
+# current buf: size = 8162 B / used = 176 B / count = 20 / avg = 8 B
 
-# strcache performance: lookups = 27 / hit rate = 18%
+# strcache performance: lookups = 26 / hit rate = 23%
 # hash-table stats:
-# Load=22/8192=0%, Rehash=0, Collisions=1/27=4%
-# Finished Make data base on Fri Jun 10 18:01:26 2022
+# Load=20/8192=0%, Rehash=0, Collisions=1/26=4%
+# Finished Make data base on Sat Jun 11 16:38:31 2022
 
  

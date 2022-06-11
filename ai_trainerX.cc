@@ -22,12 +22,15 @@ int main()
     char * myfifo = "/tmp/myfifoX";
     char buf[MAX_BUF];
     string OK = "Yes";
+    
     // create the FIFO (named pipe) //
 
     mkfifo(myfifo, 0666);
     // This is one until i conect in with //
     //The sql server //
     while(1){
+
+
 
         // Here we write to confirm the AI 
         // Is ready to make a move 

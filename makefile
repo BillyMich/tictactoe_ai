@@ -3,7 +3,16 @@ test :
 	gnome-terminal -e ./a.out
 	g++ ai_trainerX.cc
 	gnome-terminal -e ./a.out
-	g++ test_main.cc -l sqlite3
+	g++ Main.cc -l sqlite3
 	gnome-terminal -e ./a.out
+
+db : 
+	g++ MakeDB.cc -l sqlite3
+	gnome-terminal -e ./a.out
+
+data : 
+	g++ MakeDB.cc -l sqlite3
+	./a.out
+
 
 	

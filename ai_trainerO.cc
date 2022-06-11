@@ -7,7 +7,7 @@
 #include <cstdio>
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>
-#include <iostream>  
+#include <iostream>
 
 
 using namespace std;  
@@ -21,6 +21,7 @@ int main()
     int fd;
     char * myfifo = "/tmp/myfifoO";
     char buf[MAX_BUF];
+    
 
     // create the FIFO (named pipe) //
 
@@ -28,6 +29,7 @@ int main()
     // This is one until i conect in with //
     //The sql server //
     while(1){
+        
 
         // Here we write to confirm the AI 
         // Is ready to make a move 
@@ -57,6 +59,7 @@ int main()
         // sent the move we got to the main
 
     fd = open(myfifo, O_WRONLY);
+        
         int Move = rand() % 9  ;
 
         //Here we make some configuration //
@@ -70,10 +73,11 @@ int main()
     fd = open(myfifo, O_RDONLY);
     read(fd, buf, MAX_BUF);
     close(fd);
+    
     if((strcmp(buf,"Yes"))==0){
     printf("Received: %s\n", buf);
     break; 
-    }
+    }//else printf("Received: %s\n", buf);
        
     }
 
